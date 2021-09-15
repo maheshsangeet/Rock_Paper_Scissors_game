@@ -1,87 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Merienda&display=swap');
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 .container {
-    width: 100%;
-    height: 100vh;
-    font-family: sans-serif;
+  width: 100%;
+  height: 100vh;
+  font-family: sans-serif;
+  font-family: 'Merienda', cursive;
+  background-color: #111010;
+  color: rgb(247, 234, 234);
 
 }
 .score {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 20vh;
-    font-size: 1.8rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+  font-size: 1.6rem;
+}
+.playerScore {
+  box-shadow: 2px 2px 1px 3px rgb(15, 15, 15);
+  padding: 1rem 3rem;
+}
+.computerScore {
+  box-shadow: 2px 2px 1px 3px rgb(15, 15, 15);
+  padding: 1rem 2rem;
 }
 .score p {
-    text-align: center;
-    margin-top: 1.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 2.6rem;
 }
 .introduction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50vh;
-    justify-content: space-around;
-    transition: opacity 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  justify-content: space-around;
+  transition: opacity 0.5s ease;
+  /* border: 1px solid whitesmoke; */
 }
 .introduction h1 {
-    font-size: 4rem;
+  font-size: 4rem;
+  margin-top: 2rem;
+
+}
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Kalam', cursive;
+  color: rgba(248, 239, 239, 0.719);
+  box-shadow: 0 1px 5px 1px black;
 }
 .introduction button {
-    font-size: 2rem;
-    padding: 1rem 2rem;
-    background: none;
-    /* border: none; */
-    border-radius: 3px;
-    cursor: pointer;
+  font-size: 2.2rem;
+  padding: 1rem 3rem;
+  border-radius: 3px;
+  margin-top: 5rem;
+}
+.introduction button:hover {
+  background-color: #131313;
+}
+.playerName {
+  font-size: 2rem;
+  padding: .8rem;
+  margin-top: 15rem;
+  background: transparent;
+  border: none;
+  text-align: center;
+  outline: none;
+  color: #ffff;
+  border-radius: 5px;
+}
+.playerName:hover {
+  background-color: rgb(12, 12, 12);
+}
+.playerName:focus {
+  background-color: rgb(36, 36, 35);
+}
+.playerScore h2 {
+  text-transform: capitalize;
 }
 .game {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: opacity 0.5s ease 0.5s;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.5s ease 0.5s;
 }
 .winner {
-    font-size: 3.8rem;
-    text-align: center;
+  font-size: 3.8rem;
+  text-align: center;
+  color: rgba(250, 235, 215, 0.712);
 }
 .hands ,.options {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 img {
-    width: 250px;
-    margin: 1rem 0;
+  width: 300px;
+  margin: 1rem 0 0 0;
+  filter: drop-shadow(1px 4px 8px rgb(77, 76, 76));
 }
 .playerHand {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 .options button {
-    width: 120px;
-    padding: 1rem 0;
-    font-size: 1.8rem;
-    background: none;
-    /* border: none; */
-    border-radius: 3px;
-    cursor: pointer;
-    margin: 2rem; 
+  width: 130px;
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 2rem;
+  font-family: 'Kalam', cursive;
+  color: rgb(248, 239, 239);
+  border-radius: 30px;
+  box-shadow: 0 1px 5px 1px black;
+}
+.btn:active {
+  transform: scale(.9);
+  transition: transform .5s ease;
 }
 .fadeOut {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
 .fadeIn {
-    opacity: 1;
-    pointer-events: all;
+  opacity: 1;
+  pointer-events: all;
 }
 
 @keyframes shakePlayer {
