@@ -59,8 +59,8 @@ function playGame() {
                 compareHands(e.target.textContent, computerChoice);
 
                 // update images
-                computerHand.src = `../assets/${computerChoice}.png`;
-                playerHand.src = `../assets/${e.target.textContent}.png`;
+                computerHand.src = `./assets/${computerChoice}.png`;
+                playerHand.src = `./assets/${e.target.textContent}.png`;
             }, 2000)
  
         })
